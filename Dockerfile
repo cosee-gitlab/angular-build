@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y gconf-service libasound2 libatk1.0-0 li
     libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 \
     libnss3 lsb-release xdg-utils wget jq && apt-get autoremove -y
 
-RUN yarn config set cache-folder ./.yarn-cache && \
-    yarn global add @angular/cli && \
-    yarn global add gulp && \
-    yarn global add puppeteer && \
-    yarn global add @sentry/cli && \
-    yarn install
+RUN npm config set cache -g ./.npm-cache && \
+    npm -g install @angular/cli && \
+    npm -g install gulp && \
+    npm -g install puppeteer && \
+    npm -g install @sentry/cli && \
+    npm install
